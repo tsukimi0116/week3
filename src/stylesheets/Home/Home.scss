@@ -1,0 +1,40 @@
+.tb{
+    margin: auto;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    table{
+        tbody{
+            tr{
+                th{
+                    padding: 5px 5px 5px 5px;
+                }
+                #deg{
+                    width: 121px;
+                    height: 43.5px;
+                }
+                td{
+                    padding: 10px 10px 10px 10px;
+                    text-align: center;
+                    #sign{
+                        border: 1px rgb(40, 174, 219) solid;
+                        color:rgb(40, 174, 219);
+                        padding: 3px;
+                        cursor: pointer;
+                    }
+                    input{
+                        width: 100px;
+                        // border: none;
+                        // opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

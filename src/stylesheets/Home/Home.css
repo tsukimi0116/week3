@@ -1,0 +1,45 @@
+.tb {
+  margin: auto;
+  width: 400px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tb table, .tb th, .tb td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tb table tbody tr th {
+  padding: 5px 5px 5px 5px;
+}
+
+.tb table tbody tr #deg {
+  width: 121px;
+  height: 43.5px;
+}
+
+.tb table tbody tr td {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.tb table tbody tr td #sign {
+  border: 1px #28aedb solid;
+  color: #28aedb;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.tb table tbody tr td input {
+  width: 100px;
+}
+/*# sourceMappingURL=Home.css.map */
