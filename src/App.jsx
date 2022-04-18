@@ -7,8 +7,12 @@ import Admin from './Components/Admin/Admin';
 import Product from './Components/ProductList/Product';
 import ProductPage from './Components/ProductList/ProductPage';
 import Error404 from './Components/Home/Error404';
+import { useSelector } from 'react-redux'
+import ApiSearch from './Components/Home/ApiSearch';
 
 const App = () => {
+  const name = useSelector((state) => state.login.name)
+  console.log(name);
 
   return (
     <BrowserRouter>
@@ -16,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} exact />
         <Route path="/Login" element={<Login />} exact />
         <Route path="/Admin" element={<Admin />} exact />
+        <Route path="/Api" element={<ApiSearch />} exact />
         <Route path="/Product" element={<Product />} exact />
         <Route path="/Product/:id" element={<ProductPage />} exact />
 

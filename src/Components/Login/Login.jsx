@@ -1,22 +1,19 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { LoginFunc } from '../../features/login/loginSlice';
 
 const Login = () => {
 
-    const navigation = useNavigate();
+    const name = useSelector((state) => state.login.name)
 
-    const click = () => {
-        sessionStorage.setItem('token', 'token')
-        setTimeout(() => {
-            navigation('/')
-        }, 1000);
+    const dispatch = useDispatch()
 
-    }
+    console.log(name);
 
     return (
         <div>
             <h1>Login</h1>
-            <button onClick={click}>Login</button>
+            <button onClick={() => { dispatch(LoginFunc()) }}>Login</button>
         </div>
     )
 }

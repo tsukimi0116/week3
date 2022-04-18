@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import '../../stylesheets/Home/Home.css';
 
 const Home = () => {
+    const navigate = useNavigate();
     const [signIn, setSignIn] = useState({
         Tris: false,
         Nono: false,
@@ -26,8 +28,18 @@ const Home = () => {
         { num: 5, name: 'Yue', deg: deg.Yue, status: signIn.Yue },
     ]
 
+
     return (
         <div className='tb'>
+            <button onClick={() => {
+                navigate('/Login')
+            }}>登入</button>
+            <button onClick={() => {
+                navigate('/Admin')
+            }}>後台</button>
+            <button onClick={() => {
+                navigate('/Product')
+            }}>產品</button>
             <table>
                 <tbody>
                     <tr>
