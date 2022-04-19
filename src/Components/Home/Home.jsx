@@ -19,7 +19,6 @@ const Home = () => {
         Patrick: '',
         Yue: ''
     })
-
     const list = [
         { num: 1, name: 'Tris', deg: deg.Tris, status: signIn.Tris },
         { num: 2, name: 'Nono', deg: deg.Nono, status: signIn.Nono },
@@ -27,7 +26,6 @@ const Home = () => {
         { num: 4, name: 'Patrick', deg: deg.Patrick, status: signIn.Patrick },
         { num: 5, name: 'Yue', deg: deg.Yue, status: signIn.Yue },
     ]
-
 
     return (
         <div className='tb'>
