@@ -7,21 +7,17 @@ export const loginSlice = createSlice({
         token: sessionStorage.getItem('token')
     },
     reducers: {
-        LoginFunc: (state) => {
-            state.name = 'Edward';
-            state.token = 'AOQGKICVOGJANGO';
-            sessionStorage.setItem('token', state.token)
-            sessionStorage.setItem('name', state.name)
-            window.location.href = 'http://localhost:3000/';
+        LoginFunc: (state, info) => {
+            sessionStorage.setItem('token', info.payload.token)
+            sessionStorage.setItem('name', info.payload.name)
         },
-        logout: (state) => {
-            state.name = ''
-            state.token = ''
-            sessionStorage.clear();
-            window.location.href = 'http://localhost:3000/Login';
+        LogoutFunc: (state, info) => {
+            if (info.payload) {
+                sessionStorage.clear();
+            }
         }
     }
 })
 
-export const { LoginFunc, logout } = loginSlice.actions
+export const { LoginFunc, LogoutFunc } = loginSlice.actions
 export default loginSlice.reducer

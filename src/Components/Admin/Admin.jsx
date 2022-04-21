@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../../features/login/loginSlice'
+import { LogoutFunc } from '../../features/login/loginSlice';
+import { Logout } from '../Login/api';
 
 const Admin = () => {
 
@@ -10,6 +11,16 @@ const Admin = () => {
     const name = useSelector((state) => state.login.name)
 
     const dispatch = useDispatch();
+
+    const logoutHandler = async () => {
+        try {
+            let data = await Logout()
+            dispatch(LogoutFunc(data))
+            window.location.href = 'http://localhost:3000/Login'
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     useEffect(() => {
         if (!sessionStorage.getItem('token')) {
@@ -21,7 +32,7 @@ const Admin = () => {
         <div>
             <h1>Admin</h1>
             <p>Hello!{name}</p>
-            <button onClick={() => { dispatch(logout()) }}>logout</button>
+            <button onClick={logoutHandler}>logout</button>
         </div>
     )
 }
