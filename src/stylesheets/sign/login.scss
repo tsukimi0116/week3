@@ -1,0 +1,46 @@
+.login{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .loginArea{
+    width: 310px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    .titleFlex{
+      width: 310px;
+      display: flex;
+      justify-content: center;
+    }
+    .inputFlex{
+      margin-top:20px;
+      label{
+        &:nth-of-type(2){
+          margin-top: 20px;
+        }
+      }
+      input{
+        width: 300px;
+        height:40px;
+        margin-top: 15px;
+        padding-left: 10px;
+        border: 1px solid #b2b2b2;
+        border-radius: 10px;
+        font-size: 20px;
+        &:nth-of-type(1){
+          margin-bottom: 20px;
+        }
+        &:focus{
+          outline-color: cornflowerblue;
+        }
+      }
+    }
+    .btnFlex{
+
+    }
+  }
+}
